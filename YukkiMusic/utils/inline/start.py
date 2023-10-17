@@ -133,3 +133,23 @@ def private_panel(_, BOT_USERNAME, OWNER: Union[bool, int] = None):
         [InlineKeyboardButton(text=_["ST_B_6"], callback_data="LG")]
     )
     return buttons
+
+
+def private_panel(_):
+    buttons = [
+        [
+            InlineKeyboardButton(
+                text=_["S_B_3"],
+                url=f"https://t.me/{app.username}?startgroup=true",
+            )
+        ],
+        [
+            InlineKeyboardButton(text=_["S_B_8"], callback_data="settings_back_helper),
+            InlineKeyboardButton(text=_["S_B_2"], url=config.SUPPORT_CHAT),
+        ],
+        [
+            InlineKeyboardButton(text=_["S_B_6"], url=config.SUPPORT_CHANNEL),
+            InlineKeyboardButton(text=_["S_B_7"], url=config.UPSTREAM_REPO),
+        ],
+    ]
+    return buttons
